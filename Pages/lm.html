@@ -4,46 +4,47 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>LM notes: Index</title>
+	<link rel="stylesheet" href="../CSS/lm-style.css">
+	<script src="JS/lm-script.js" defer></script>
 </head>
 <body>
 	<h1> Libro de apuntes: Lenguaje de Marcas</h1>
 
-	<h2>HTML BÁSICO</h2>
-	<ul>
-		<li><a href="introduccio_a_html.html">Introducción a HTML</a></li>
-		<li><a href="estructura_basica_html.html">Estructura básica de un documento HTML</a></li>
-		<li><a href="etiquetes_basiques.html">Etiquetas básicas</a></li>
-		<li><a href="elements_html_i_anidament.html">Elementos HTML y anidamiento</a></li>
-		<li><a href="atributs_html.html">Atributos HTML</a></li>
-		<li><a href="text_formatat.html">Texto Formatado</a></li>
-		<li><a href="comentaris_en_html.html">Comentarios en HTML</a></li>
-		<li><a href="insercio_d'imatges.html">Inserción de Imágenes</a></li>
-		<li><a href="enllaços.html">Enlaces</a></li>
-		<li><a href="llistes.html">Listas</a></li>
-		<li><a href="taules.html">Tablas</a></li>
-	</ul>
+	<section id="centered-container">
+		<div id="book-grid"></div> 
 
-	<h2>HTML AVANZADO</h2>
-	<ul>
-		<li><a href="html5_evolució.html">Evolución de HTML5</a></li>
+		<article id="book">
+			<div class="page" id="front-page">
+				<div id="portrait-back-face"></div>
+				<div class="page-division"></div>
+			</div>
 
-		<li><a href="html_formularies.html">Formularios de HTML</a></li>
+			<div class="page" id="back-page">
+				<div class="page-division"></div>
+			</div>
+		</article>
+	</section>
 
-		<li><a href="html_multimedia.html">Multimedia en HTML</a></li>
 
-		<li><a href="center_tag.html">&ltcenter&gt tag</a></li>
 
-		<li><a href="div_tag.html">&ltdiv&gt tag</a></li>
+	<!----------TEMPLATES------------->
+	<template id="tiny-book-template">
+		<article class="book-element">
+			<div class="tiny-page">
+				<div class="page-division"></div>
+			</div>
+		</article>
+	</template>
 
-		<li><a href="span_tag.html">&ltspan&gt tag</a></li>
-
-		<li><a href="ht_tag.html">&lthr&gt tag</a></li>
-
-		<li><a href="template_tag.html">&lttemplate&gt tag</a></li>
-
-		<li><a href="Iframes_tag.html">&ltIframe&gt tag</a></li>
-
-		<li><a href="HTML_metadata.html">Metadatos de HTML</a></li>
-	</ul>
+	<template id="page-template">
+		<div class="page">
+			<article class="front">
+				<iframe class="page-iframe"></iframe>
+			</article>
+			<article class="back">
+				<iframe class="page-iframe"></iframe>
+			</article>
+		</div>
+	</template>
 </body>
 </html>
